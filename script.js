@@ -1,15 +1,19 @@
 const current = document.querySelector('#current');
-const imgs = document.querySelectorAll('.imgs' '.img');
+const imgs = document.querySelectorAll('.imgs img');
 const opacity = 0.6;
 
 // Set first image opacity
 imgs[0].style.opacity = opacity;
 
-imgs.forEach(img => 
-	img.addEventListener('click', imgClick())
+// imgs.forEach(img => 
+// 	img.addEventListener('click', (e) => current.src = e.target.src))imgClick())
+// );
+
+imgs.forEach(img =>
+	img.addEventListener('click', imgClick)
 );
 
-funtion imgClick(e) {
+function imgClick(e) {
 	// Reset opacity of all images
 	imgs.forEach(img => (img.style.opacity = 1));
 
